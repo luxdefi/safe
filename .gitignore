@@ -6,6 +6,7 @@ node_modules
 .pnp.js
 .yarn
 .icloud
+.next
 
 # testing
 /coverage
@@ -14,7 +15,6 @@ node_modules
 /src/types/contracts/
 
 # next.js
-/.next/
 /out/
 
 # production

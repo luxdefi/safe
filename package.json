@@ -12,12 +12,12 @@
     "yarn"
   ],
   "scripts": {
-    "build": "yarn build:web",
+    "build": "yarn build:app",
+    "build:app": "yarn workspace @luxsafe/app build",
     "build:contracts": "yarn workspace @luxsafe/contracts build",
     "build:sdk": "yarn workspace @luxsafe/sdk build",
     "build:ui": "yarn workspace @luxsafe/ui build",
-    "build:web": "yarn workspace @luxsafe/web build",
-    "web": "yarn workspace @luxsafe/web dev"
+    "dev": "yarn workspace @luxsafe/app dev"
   },
   "engines": {
     "node": ">=12"
@@ -34,7 +34,8 @@
     ],
     "nohoist": [
       "**/@openzeppelin/contracts-upgradeable/**",
-      "**/@openzeppelin/contracts"
+      "**/@openzeppelin/contracts",
+      "**/@coinbase/wallet-sdk"
     ]
   },
   "packageManager": "yarn@3.3.1",
