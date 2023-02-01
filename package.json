@@ -24,9 +24,13 @@
   },
   "workspaces": {
     "packages": [
+      "app",
       "contracts",
+      "deployments",
+      "modules",
+      "modules-deployments",
       "react",
-      "web"
+      "scripts"
     ],
     "nohoist": [
       "**/@openzeppelin/contracts-upgradeable/**",
