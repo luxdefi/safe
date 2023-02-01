@@ -1,5 +1,6 @@
 {
-  "name": "@luxsafe/monorepo",
+  "name": "safe",
+  "private": true,
   "version": "1.0.0",
   "author": "Lux Partners Limited <hi@lux.partners> (https://lux.partners)",
   "license": "MIT",
@@ -10,21 +11,21 @@
     "workspaces",
     "yarn"
   ],
-  "private": true,
   "scripts": {
     "build": "yarn build:web",
-    "build:web": "yarn workspace @luxsafe/web build",
     "build:contracts": "yarn workspace @luxsafe/contracts build",
     "build:sdk": "yarn workspace @luxsafe/sdk build",
     "build:ui": "yarn workspace @luxsafe/ui build",
-    "dev": "yarn workspace @luxsafe/web dev"
+    "build:web": "yarn workspace @luxsafe/web build",
+    "web": "yarn workspace @luxsafe/web dev"
   },
   "engines": {
-    "node": ">=12",
-    "yarn": ">=2"
+    "node": ">=12"
   },
   "workspaces": {
     "packages": [
+      "contracts",
+      "react",
       "web"
     ],
     "nohoist": [
