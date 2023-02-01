@@ -50,3 +50,11 @@ yalc.lock
 /public/sw.js.map
 /public/workbox-*.js
 /public/workbox-*.js.map
+
+.yarn/
+.yarnrc.yml
+pnpm-lock.yaml
+web/.next/
+web/.yarn/
+web/.yarnrc.yml
+web/pnpm-lock.yaml
