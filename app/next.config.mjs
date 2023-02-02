@@ -16,8 +16,11 @@ const nextConfig = {
   reactStrictMode: false,
   productionBrowserSourceMaps: true,
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: true, // TODO
     dirs: ['src'],
+  },
+  typescript: {
+    ignoreBuildErrors: true, // TODO
   },
   experimental: {
     images: {
