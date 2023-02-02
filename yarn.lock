@@ -5099,7 +5099,7 @@
     "@safe-global/safe-core-sdk-utils" "^1.7.1"
     ethers "5.7.2"
 
-"@safe-global/safe-gateway-typescript-sdk@^3.5.5":
+"@safe-global/safe-gateway-typescript-sdk@^3.7.0":
   version "3.7.0"
   resolved "https://registry.yarnpkg.com/@safe-global/safe-gateway-typescript-sdk/-/safe-gateway-typescript-sdk-3.7.0.tgz#2af52f1bc73759b1b6a549fed598781c8c5fce72"
   integrity sha512-3BvlUgp0oZ1Zkn7nG3wY1jvCEE4t530BjKcaa3r0qsf0whf/ez/0gmQwk7DTOGmVmvOfjj6HHikxnrUCCX+/3Q==
