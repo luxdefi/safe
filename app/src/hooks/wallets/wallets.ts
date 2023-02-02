@@ -4,7 +4,7 @@ import type { ChainInfo } from '@safe-global/safe-gateway-typescript-sdk'
 
 import coinbaseModule from '@web3-onboard/coinbase'
 import injectedWalletModule, { ProviderLabel } from '@web3-onboard/injected-wallets'
-import keystoneModule from '@web3-onboard/keystone/dist/index'
+import keystoneModule from '@luxsafe/keystone/dist/index'
 import ledgerModule from '@web3-onboard/ledger'
 import trezorModule from '@web3-onboard/trezor'
 import walletConnect from '@web3-onboard/walletconnect'

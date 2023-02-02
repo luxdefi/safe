@@ -38,7 +38,7 @@
       "**/@coinbase/wallet-sdk"
     ]
   },
-  "packageManager": "yarn@3.3.1",
+  "packageManager": "yarn@1.22.19",
   "devDependencies": {
     "@parcel/packager-ts": "2.8.3",
     "@parcel/transformer-typescript-types": "2.8.3",
