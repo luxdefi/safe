@@ -6,6 +6,29 @@ import palette from './colors'
 import darkPalette from './colors-dark'
 import { base } from './spacings'
 
+const injectStyle = (style: string) => {
+  const styleElement = document.createElement('style')
+  document.head.appendChild(styleElement)
+  let styleSheet = styleElement.sheet
+  if (styleSheet)
+    styleSheet.insertRule(style, styleSheet.cssRules.length)
+}
+
+const keyframesStyle = `
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+`
+injectStyle(keyframesStyle)
+
 declare module '@mui/material/styles' {
   // Custom color palettes
   interface Palette {
@@ -154,6 +177,13 @@ const initTheme = (darkMode: boolean) => {
           sizeMedium: {
             fontSize: '16px',
             padding: '12px 24px',
+          },
+          contained: {
+            '&:hover': {
+                background: 'linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)',
+                backgroundSize: '400% 400%',
+                animation: 'gradient 11s ease infinite',
+            }
           },
           root: ({ theme }) => ({
             borderRadius: theme.shape.borderRadius,
