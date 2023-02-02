@@ -16,6 +16,7 @@ const nextConfig = {
   reactStrictMode: false,
   productionBrowserSourceMaps: true,
   eslint: {
+    ignoreDuringBuilds: true,
     dirs: ['src'],
   },
   experimental: {

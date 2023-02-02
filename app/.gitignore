@@ -1,0 +1,3 @@
+public/fallback*
+public/sw*
+public/workbox*
