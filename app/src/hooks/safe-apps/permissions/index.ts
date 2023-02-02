@@ -25,5 +25,5 @@ export const getBrowserPermissionDisplayValues = (feature: AllowedFeatures) => {
   return {
     displayName: capitalize(feature).replace(/-/g, ' '),
     description: `Allow to use - ${feature}`,
-  }
+  };
 }

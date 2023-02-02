@@ -1,5 +1,5 @@
 const trimTrailingSlash = (url: string): string => {
-  return url.replace(/\/$/, '')
+  return url.replace(/\/$/, '');
 }
 
 const isSameUrl = (url1: string, url2: string): boolean => {

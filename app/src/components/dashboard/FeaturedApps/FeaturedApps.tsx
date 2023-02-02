@@ -34,25 +34,25 @@ export const FeaturedApps = (): ReactElement | null => {
             {featuredApps?.map((app) => (
               <StyledGridItem item xs md key={app.id}>
                 <NextLink passHref href={{ pathname: AppRoutes.apps, query: { ...router.query, appUrl: app.url } }}>
-                  <a>
-                    <Card>
-                      <Grid container alignItems="center" spacing={3}>
-                        <Grid item xs={12} md={3}>
-                          <SafeAppIcon src={app.iconUrl} alt={app.name} width={64} height={64} />
-                        </Grid>
 
-                        <Grid item xs={12} md={9}>
-                          <Box mb={1.01}>
-                            <Typography fontSize="lg">{app.description}</Typography>
-                          </Box>
-
-                          <Link color="primary.main" fontWeight="bold" component="span">
-                            Use {app.name}
-                          </Link>
-                        </Grid>
+                  <Card>
+                    <Grid container alignItems="center" spacing={3}>
+                      <Grid item xs={12} md={3}>
+                        <SafeAppIcon src={app.iconUrl} alt={app.name} width={64} height={64} />
                       </Grid>
-                    </Card>
-                  </a>
+
+                      <Grid item xs={12} md={9}>
+                        <Box mb={1.01}>
+                          <Typography fontSize="lg">{app.description}</Typography>
+                        </Box>
+
+                        <Link color="primary.main" fontWeight="bold" component="span">
+                          Use {app.name}
+                        </Link>
+                      </Grid>
+                    </Grid>
+                  </Card>
+
                 </NextLink>
               </StyledGridItem>
             ))}
@@ -60,5 +60,5 @@ export const FeaturedApps = (): ReactElement | null => {
         </WidgetBody>
       </WidgetContainer>
     </Grid>
-  )
+  );
 }

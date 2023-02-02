@@ -6,7 +6,7 @@ import type { EthersError } from '@/utils/ethers-utils'
 import { ErrorCode } from '@ethersproject/logger'
 
 const isWCRejection = (err: Error): boolean => {
-  return /rejected/.test(err?.message)
+  return /rejected/.test(err?.message);
 }
 
 const isEthersRejection = (err: EthersError): boolean => {

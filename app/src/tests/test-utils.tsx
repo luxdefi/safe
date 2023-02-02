@@ -36,7 +36,7 @@ const getProviders: (options: {
   routerProps?: Partial<NextRouter>
   initialReduxState?: Partial<RootState>
 }) => React.FC<{ children: React.ReactElement }> = ({ routerProps, initialReduxState }) =>
-  function ProviderComponent({ children }) {
+  (function ProviderComponent({ children }) {
     const { StoreHydrator } = require('@/store') // require dynamically to reset the store
 
     return (
@@ -46,7 +46,7 @@ const getProviders: (options: {
         </RouterContext.Provider>
       </StoreHydrator>
     )
-  }
+  })
 
 const customRender = (
   ui: React.ReactElement,

@@ -43,9 +43,9 @@ const Header = ({ onMenuToggle }: HeaderProps): ReactElement => {
 
       <div className={classnames(css.element, css.hideMobile, css.logo)}>
         <Link href={logoHref} passHref>
-          <a>
-            <SafeLogo alt="Safe logo" />
-          </a>
+
+          <SafeLogo alt="Safe logo" />
+
         </Link>
       </div>
 
@@ -71,7 +71,7 @@ const Header = ({ onMenuToggle }: HeaderProps): ReactElement => {
         <NetworkSelector />
       </div>
     </Paper>
-  )
+  );
 }
 
 export default Header

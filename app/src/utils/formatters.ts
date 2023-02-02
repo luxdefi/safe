@@ -7,7 +7,7 @@ const GWEI = 'gwei'
 
 export const _removeTrailingZeros = (value: string): string => {
   // Match `.000` or `.01000`
-  return value.replace(/\.0+$/, '').replace(/(\..*?)0+$/, '$1')
+  return value.replace(/\.0+$/, '').replace(/(\..*?)0+$/, '$1');
 }
 
 /**
@@ -79,7 +79,7 @@ export const camelCaseToSpaces = (str: string): string => {
   return str
     .replace(/([A-Z][a-z0-9]+)/g, ' $1 ')
     .replace(/\s{2}/g, ' ')
-    .trim()
+    .trim();
 }
 
 export const ellipsis = (str: string, length: number): string => {

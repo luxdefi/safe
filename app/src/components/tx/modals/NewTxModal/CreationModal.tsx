@@ -49,22 +49,22 @@ const CreationModal = ({
           <SendNFTsButton onClick={onNFTModalOpen} />
 
           {txBuilder.app && shouldShowTxBuilder && (
-            <Link href={txBuilder.link} passHref>
-              <a style={{ width: '100%' }}>
-                <TxButton
-                  startIcon={<img src={txBuilder.app.iconUrl} height={20} width="auto" alt={txBuilder.app.name} />}
-                  variant="outlined"
-                  onClick={onContractInteraction}
-                >
-                  Contract interaction
-                </TxButton>
-              </a>
-            </Link>
+            (<Link href={txBuilder.link} passHref style={{ width: '100%' }}>
+
+              <TxButton
+                startIcon={<img src={txBuilder.app.iconUrl} height={20} width="auto" alt={txBuilder.app.name} />}
+                variant="outlined"
+                onClick={onContractInteraction}
+              >
+                Contract interaction
+              </TxButton>
+
+            </Link>)
           )}
         </Box>
       </DialogContent>
     </ModalDialog>
-  )
+  );
 }
 
 export default CreationModal

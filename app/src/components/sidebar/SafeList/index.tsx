@@ -83,7 +83,7 @@ const SafeList = ({ closeDrawer }: { closeDrawer?: () => void }): ReactElement =
         </Typography>
         {!isWelcomePage && (
           <Track {...OVERVIEW_EVENTS.ADD_SAFE}>
-            <Link href={{ pathname: AppRoutes.welcome }} passHref>
+            <Link href={{ pathname: AppRoutes.welcome }} passHref legacyBehavior>
               <Button
                 disableElevation
                 size="small"
@@ -103,7 +103,10 @@ const SafeList = ({ closeDrawer }: { closeDrawer?: () => void }): ReactElement =
           <SvgIcon component={LoadingIcon} inheritViewBox sx={{ width: '85px', height: '80px' }} />
           <Typography variant="body2" color="primary.light" textAlign="center" mt={3}>
             {!isWelcomePage ? (
-              <Link href={{ pathname: AppRoutes.welcome, query: router.query }} passHref>
+              <Link
+                href={{ pathname: AppRoutes.welcome, query: router.query }}
+                passHref
+                legacyBehavior>
                 <MuiLink onClick={closeDrawer}>{NO_SAFE_MESSAGE}</MuiLink>
               </Link>
             ) : (
@@ -144,7 +147,10 @@ const SafeList = ({ closeDrawer }: { closeDrawer?: () => void }): ReactElement =
               {!addedSafeEntriesOnChain.length && !ownedSafesOnChain.length && (
                 <Typography variant="body2" color="primary.light" p={2} textAlign="center">
                   {!isWelcomePage ? (
-                    <Link href={{ pathname: AppRoutes.welcome, query: router.query }} passHref>
+                    <Link
+                      href={{ pathname: AppRoutes.welcome, query: router.query }}
+                      passHref
+                      legacyBehavior>
                       <MuiLink onClick={closeDrawer}>{NO_SAFE_MESSAGE}</MuiLink>
                     </Link>
                   ) : (
@@ -209,10 +215,10 @@ const SafeList = ({ closeDrawer }: { closeDrawer?: () => void }): ReactElement =
                 </>
               )}
             </Fragment>
-          )
+          );
         })}
     </div>
-  )
+  );
 }
 
 export default SafeList
