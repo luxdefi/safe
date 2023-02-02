@@ -65,6 +65,8 @@ export const getEmptySafeApp = (url = ''): SafeAppDataWithPermissions => {
     url,
     name: 'unknown',
     iconUrl: '/images/apps/apps-icon.svg',
+    features: null as any,
+    socialProfiles: null as any,
     description: '',
     chainIds: [],
     accessControl: {

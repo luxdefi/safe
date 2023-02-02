@@ -226,7 +226,7 @@ export const checkSafeCreationTx = async (
     const status = handleSafeCreationError(_err)
 
     if (status !== SafeCreationStatus.SUCCESS) {
-      dispatch(showSafeCreationError(_err))
+      dispatch(showSafeCreationError(_err) as any)
     }
 
     return status

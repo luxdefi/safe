@@ -99,7 +99,7 @@ const ImportAllDialog = ({ handleClose }: { handleClose: () => void }): ReactEle
             ? [`${addressBookEntriesCount} addresses were added to your address book.`]
             : []),
         ].join('\n'),
-      }),
+      }) as any,
     )
 
     handleClose()

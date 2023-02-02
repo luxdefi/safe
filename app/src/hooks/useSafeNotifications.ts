@@ -56,7 +56,7 @@ const useSafeNotifications = (): void => {
               },
               title: 'Update Safe',
             },
-      }),
+      }) as any,
     )
 
     return () => {
@@ -86,7 +86,7 @@ const useSafeNotifications = (): void => {
            We recommend using the command line interface instead.`,
         groupKey: 'invalid-mastercopy',
         link: CLI_LINK,
-      }),
+      }) as any,
     )
 
     return () => {

@@ -103,6 +103,8 @@ const fetchSafeAppFromManifest = async (
     url: normalizedAppUrl,
     name: appManifest.name,
     description: appManifest.description,
+    features: null as any,
+    socialProfiles: null as any,
     accessControl: { type: SafeAppAccessPolicyTypes.NoRestrictions },
     tags: [],
     chainIds: [currentChainId],

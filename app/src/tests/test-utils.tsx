@@ -27,6 +27,7 @@ const mockRouter = (props: Partial<NextRouter> = {}): NextRouter => ({
   replace: jest.fn(() => Promise.resolve(true)),
   route: '/',
   query: {},
+  forward: () => {},
   ...props,
 })
 

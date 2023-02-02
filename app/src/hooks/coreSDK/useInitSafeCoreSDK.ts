@@ -29,7 +29,7 @@ export const useInitSafeCoreSDK = () => {
             message: `The Safe SDK could not be initialized. Please try connecting the wallet again.`,
             groupKey: 'core-sdk-init-error',
             variant: 'error',
-          }),
+          }) as any,
         )
         trackError(ErrorCodes._105, (e as Error).message)
 

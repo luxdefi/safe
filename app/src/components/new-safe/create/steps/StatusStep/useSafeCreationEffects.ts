@@ -35,7 +35,7 @@ const useSafeCreationEffects = ({
             pendingSafe.name,
             pendingSafe.owners,
             pendingSafe.threshold,
-          ),
+          ) as any,
         )
       }
 

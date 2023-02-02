@@ -83,7 +83,7 @@ export const useSafeCreation = (
       setStatus(status)
 
       if (status !== SafeCreationStatus.SUCCESS) {
-        dispatch(showSafeCreationError(_err))
+        dispatch(showSafeCreationError(_err) as any)
       }
     }
 

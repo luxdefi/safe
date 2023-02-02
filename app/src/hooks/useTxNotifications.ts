@@ -99,7 +99,7 @@ const useTxNotifications = (): void => {
             groupKey,
             variant: isError ? Variant.ERROR : isSuccess ? Variant.SUCCESS : Variant.INFO,
             link: txId ? getTxLink(txId, chain, safeAddress) : txHash ? getTxExplorerLink(txHash, chain) : undefined,
-          }),
+          }) as any,
         )
       }),
     )
@@ -147,7 +147,7 @@ const useTxNotifications = (): void => {
           message: 'A transaction requires your confirmation.',
           link: chain && getTxLink(txId, chain, safeAddress),
           groupKey: txId,
-        }),
+        }) as any,
       )
     }
   }, [chain, dispatch, isGranted, notifications, safeAddress, txsAwaitingConfirmation])
