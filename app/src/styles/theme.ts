@@ -7,12 +7,12 @@ import darkPalette from './colors-dark'
 import { base } from './spacings'
 
 const injectStyle = (style: string) => {
-  if (typeof window === 'undefined') {
-    const styleElement = document.createElement('style')
-    document.head.appendChild(styleElement)
-    let styleSheet = styleElement.sheet
-    if (styleSheet) styleSheet.insertRule(style, styleSheet.cssRules.length)
-  }
+  if (typeof window === 'undefined') return
+  const styleElement = document.createElement('style')
+  document.head.appendChild(styleElement)
+  let styleSheet = styleElement.sheet
+  if (styleSheet)
+    styleSheet.insertRule(style, styleSheet.cssRules.length)
 }
 
 const keyframesStyle = `
