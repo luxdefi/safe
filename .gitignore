@@ -9,6 +9,9 @@ node_modules
 .next
 .sedbak
 
+# Weird icloud bug
+*2.*
+
 # testing
 /coverage
 
